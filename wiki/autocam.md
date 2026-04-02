@@ -38,3 +38,7 @@ which car is currently providing the most compelling action.
 * Missing exciting moments → decrese `lock time` and `force switch`.
 * More dramatic broadcasts → increase `incident` and `pit`, lower `lock time`.
 * Fast‑action focus → raise `Force switch` to keep the camera locked unless something truly exciting happens.
+
+---
+
+*For additional support or to report issues, please refer to the application documentation.*
