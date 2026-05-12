@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.1] - 12/05/2026
+### Changed
+* Application
+    * Order standings splits by race position (fastest class first, slower last) (it requires each class to have at least a valid lap)
+* Overlay
+    * Do not show relative/battle for qualy session
+
 ## [1.5.0] - 10/05/2026
 ### Added
 * Application
@@ -13,7 +20,7 @@ All notable changes to this project will be documented in this file. The format 
     * Add profiling panel under debug section
 * Overlay
     * Add notification system (fast lap, penalties, etc)
-    * Add basic telmetry next to driver panel
+    * Add basic telemetry next to driver panel
     * Add relative/battle panel
 
 ### Changed
@@ -26,7 +33,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Fix
 * Application
-    * Weather retrievel data (due the changes in the game API)
+    * Weather retrieval data (due to changes in the game API)
     * Remove duplicated notifications of track limits (reported twice by the game)
 
 ## [1.4.1] - 06/04/2026
