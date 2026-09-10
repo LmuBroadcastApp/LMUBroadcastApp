@@ -1,11 +1,11 @@
 ### 🚀 LMUBroadcastApp
 <p>
-    <img alt="AppLogo" src="assets/000_logo.png" align="left"/>
+    <img alt="AppLogo" src="docs/assets/000_logo.png" align="left"/>
     "LMU Broadcast App" is an intuitive broadcast application that allows a small production team (or even a single operator) to manage a live stream and replays, view track event, handle cameras, etc. enhancing the storytelling of the race.
 </p>
 
 <p>
-    <img alt="AppOverviewImage" src="assets/001_app_overview.jpg"/>
+    <img alt="AppOverviewImage" src="docs/assets/001_app_overview.jpg"/>
 </p>
 
 ---
@@ -56,11 +56,11 @@ Have a bug report, feature request, or idea? <br/>
 ### 🖼️ Screenshots
 <table>
     <tr>
-        <td><img alt="overlay_over_game_window" src="assets/003_game_overlay.jpg"/></td>
-        <td><img alt="web_livetiming" src="assets/004_game_livetiming.jpg"/></td>
+        <td><img alt="overlay_over_game_window" src="docs/assets/003_game_overlay.jpg"/></td>
+        <td><img alt="web_livetiming" src="docs/assets/004_game_livetiming.jpg"/></td>
     </tr>
     <tr>
-        <td colspan="2"><img alt="AppVehicleOverviewAndTelemetry" src="assets/002_vehicle_overview_telemetry.jpg"/></td>
+        <td colspan="2"><img alt="AppVehicleOverviewAndTelemetry" src="docs/assets/002_vehicle_overview_telemetry.jpg"/></td>
     </tr>
 </table>
 
@@ -73,6 +73,7 @@ See [CHANGELOG.md](CHANGELOG.md) for a list of changes and updates.
 
 ## Disclaimer
 Due to inconsistencies in the game's REST API, the application may sometimes exhibit undesirable behavior (especially when loading a session). It is best to open the application when the session is loaded.
+In addition, the API (REST, WebSockets, shared memory) behaves differently depending on the type of game session (daily, endurance, hosted, weekend, etc).
 
 ## Notice
 The application is free to use. Some features are available at no cost, while others require a paid subscription.<br/>

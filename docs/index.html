@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>LMU Broadcast App - Live Streaming Made Easy</title>
+        <meta name="description" content="An intuitive broadcast application for Le Mans Ultimate. Manage live streams, replays, camera control, and more."/>
+        <meta name="theme-color" content="#0b0d12"/>
+        <meta property="og:title" content="LMU Broadcast App - Live Streaming Made Easy"/>
+        <meta property="og:description" content="An intuitive broadcast application for Le Mans Ultimate. Manage live streams, replays, camera control, and more."/>
+        <meta property="og:image" content="assets/001_app_overview.jpg"/>
+        <meta property="og:type" content="website"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="LMU Broadcast App - Live Streaming Made Easy"/>
+        <meta name="twitter:description" content="An intuitive broadcast application for Le Mans Ultimate. Manage live streams, replays, camera control, and more."/>
+        <meta name="twitter:image" content="assets/001_app_overview.jpg"/>
+        <link rel="icon" href="assets/000_logo.png"/>
+        <link rel="preconnect" href="https://api.github.com"/>
+        <link rel="stylesheet" href="static/style.css"/>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-logo">
+                    <img src="assets/000_logo.png" alt="LMU Broadcast App Logo"/> <span>LMU Broadcast App</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <!--li><a href="#screenshots">Screenshots</a></li-->
+                    <li><a href="#install">Install</a></li>
+                    <li>
+                        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">&#9790;</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section id="home" class="hero">
+            <div class="hero-circuit" aria-hidden="true">
+                <svg viewBox="0 0 900 560" fill="none">
+                    <path d="M120 440 H340 C400 440 440 420 470 385 C500 350 500 320 470 300 C440 280 430 250 450 225 L560 140 C590 112 640 110 665 138 C690 165 730 175 765 160 C800 145 820 120 805 90 C790 60 755 55 735 80 C700 120 640 120 610 150 L520 260 C500 280 500 305 525 320 C550 335 560 365 545 395 C535 420 500 425 470 440 H200 C150 440 120 430 120 440 Z" stroke="currentColor"/>
+                    <line x1="190" y1="430" x2="190" y2="450" stroke="var(--racing)"/>
+                </svg>
+            </div>
+            <div class="hero-text">
+                <div class="hero-rule"></div>
+                <span class="chip-live"><span class="live-dot"></span>Live Broadcast Ready</span>
+                <h1>Broadcast <span class="stroke">LMU</span><br/><span class="race">Like a Pro</span></h1>
+                <p>
+                    An intuitive broadcast application that allows a small production team to manage live streams, replays, camera control, and race events — enhancing the storytelling of every race.
+                </p>
+                <div class="btn-group">
+                    <a href="https://github.com/LmuBroadcastApp/LMUBroadcastApp/releases/latest/download/LMUBroadcastApp.zip" class="btn btn-primary">Download Latest</a> <a href="https://github.com/LmuBroadcastApp/LMUBroadcastApp" class="btn btn-secondary">View on GitHub</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/001_app_overview.jpg" alt="LMU Broadcast App Overview"/>
+                <span class="feed-chip top"><span class="live-dot"></span>Cam 02 &middot; Onboard</span>
+                <span class="feed-chip bottom">LMU Broadcast &middot; Lap 12 / 26</span>
+            </div>
+        </section>
+        <section id="features">
+            <h2 class="kicker">Race Director's Kit</h2>
+            <h2 class="section-title">Features</h2>
+            <p class="section-subtitle">Everything you need for professional race broadcasting</p>
+            <div class="features-grid">
+                <div class="feature-card reveal" data-num="01">
+                    <div class="feature-top"><span class="feature-plate">01</span></div>
+                    <h3>Live Standings</h3>
+                    <p>
+                        View real-time race positions, car numbers, driver names, and camera assignments for all participants.
+                    </p>
+                </div>
+                <div class="feature-card reveal" data-num="02">
+                    <div class="feature-top"><span class="feature-plate">02</span></div>
+                    <h3>Custom Overlays</h3>
+                    <p>
+                        Session info, standings tower, weather forecast, track map, and driver info — fully customizable with move, color, and font options.
+                    </p>
+                </div>
+                <div class="feature-card reveal" data-num="03">
+                    <div class="feature-top"><span class="feature-plate">03</span></div>
+                    <h3>Game Panels</h3>
+                    <p>
+                        In-game overlays for instant access to race data. Toggle them directly from the application.
+                    </p>
+                </div>
+                <div class="feature-card reveal" data-num="04">
+                    <div class="feature-top"><span class="feature-plate">04</span></div>
+                    <h3>Auto Cam</h3>
+                    <p>
+                        Intelligent camera autopilot that automatically selects the most exciting car to follow based on multiple factors.
+                    </p>
+                </div>
+                <div class="feature-card reveal" data-num="05">
+                    <div class="feature-top"><span class="feature-plate">05</span></div>
+                    <h3>Event Tracking</h3>
+                    <p>
+                        Track penalties, incidents, track limits, overtakes, and other race events as they happen.
+                    </p>
+                </div>
+                <div class="feature-card reveal" data-num="06">
+                    <div class="feature-top"><span class="feature-plate">06</span></div>
+                    <h3>Vehicle Telemetry</h3>
+                    <p>
+                        Detailed vehicle overview, pitstop times, lap times, and telemetry data including throttle, brake, and steering inputs.
+                    </p>
+                </div>
+                <div class="feature-card reveal" data-num="07">
+                    <div class="feature-top"><span class="feature-plate">07</span></div>
+                    <h3>Replay Controls</h3>
+                    <p>
+                        Go back in time with +5, +15, +30 second jumps, custom time input, and playback speed controls.
+                    </p>
+                </div>
+                <div class="feature-card reveal" data-num="08">
+                    <div class="feature-top"><span class="feature-plate">08</span></div>
+                    <h3>Notification System</h3>
+                    <p>
+                        Real-time notifications for race winners, fastest laps, penalties, track limits, and incidents.
+                    </p>
+                </div>
+                <div class="feature-card reveal" data-num="09">
+                    <div class="feature-top"><span class="feature-plate">09</span></div>
+                    <h3>Keybindings &amp; Presets</h3>
+                    <p>
+                        Full keybinding customization and configuration presets to match your workflow.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="screenshots" style="display: none;">
+            <h2 class="kicker">Live Feeds</h2>
+            <h2 class="section-title">Screenshots</h2>
+            <p class="section-subtitle">See the app in action</p>
+            <div class="shots">
+                <figure class="shot reveal" data-num="01">
+                    <div class="shot-frame">
+                        <img src="assets/003_game_overlay.jpg" alt="Game Overlay" loading="lazy"/>
+                    </div>
+                    <figcaption class="shot-caption">
+                        <span class="cam">CAM 01</span>
+                        <span class="name">Game Overlay</span>
+                        <span class="live"><span class="live-dot"></span>Live</span>
+                    </figcaption>
+                </figure>
+                <figure class="shot reveal" data-num="02">
+                    <div class="shot-frame">
+                        <img src="assets/004_game_livetiming.jpg" alt="Web Livetiming" loading="lazy"/>
+                    </div>
+                    <figcaption class="shot-caption">
+                        <span class="cam">CAM 02</span>
+                        <span class="name">Web Livetiming</span>
+                        <span class="live"><span class="live-dot"></span>Live</span>
+                    </figcaption>
+                </figure>
+                <figure class="shot reveal" data-num="03">
+                    <div class="shot-frame">
+                        <img src="assets/002_vehicle_overview_telemetry.jpg" alt="Telemetry Tab" loading="lazy"/>
+                    </div>
+                    <figcaption class="shot-caption">
+                        <span class="cam">CAM 03</span>
+                        <span class="name">Telemetry Tab</span>
+                        <span class="live"><span class="live-dot"></span>Live</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="install">
+            <h2 class="kicker">Pit Lane</h2>
+            <h2 class="section-title">Installation</h2>
+            <p class="section-subtitle">Get started in minutes</p>
+            <div class="features-grid install-steps">
+                <div class="feature-card install-step reveal" data-num="01">
+                    <div class="feature-top"><span class="feature-plate">01</span></div>
+                    <h3>Download</h3>
+                    <p>Get the latest release from GitHub</p>
+                </div>
+                <div class="feature-card install-step reveal" data-num="02">
+                    <div class="feature-top"><span class="feature-plate">02</span></div>
+                    <h3>Extract</h3>
+                    <p>Unzip the downloaded archive</p>
+                </div>
+                <div class="feature-card install-step reveal" data-num="03">
+                    <div class="feature-top"><span class="feature-plate">03</span></div>
+                    <h3>Run</h3>
+                    <p>Launch the executable file</p>
+                </div>
+                <div class="feature-card install-step reveal" data-num="04">
+                    <div class="feature-top"><span class="feature-plate">04</span></div>
+                    <h3>Enjoy</h3>
+                    <p>Start after the game session loads</p>
+                </div>
+            </div>
+            <div class="pricing-card reveal">
+                <h3 style="margin-bottom: 0.5rem">Pricing</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem">
+                    The application is free to use. Some features require a paid subscription (annual fee: &euro;30).
+                </p>
+                <div class="pricing-grid">
+                    <div>
+                        <h4 style="color: var(--accent)">Free Features</h4>
+                        <ul>
+                            <li>Standings</li>
+                            <li>Camera control</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--racing)">Premium Features</h4>
+                        <ul>
+                            <li>Events (incidents, track limits, etc.)</li>
+                            <li>Vehicle overview and telemetry</li>
+                            <li>Replay and replay controls</li>
+                            <li>Keybindings</li>
+                            <li>Autocam</li>
+                            <li>Overlay</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="disclaimer reveal">
+                <strong style="color: var(--text)">Disclaimer:</strong> Due to inconsistencies in the game's REST API, the application may sometimes exhibit undesirable behavior (especially when loading a session). It is best to open the application when the session is loaded.
+                In addition, the API (REST, WebSockets, shared memory) behaves differently depending on the type of game session (daily, endurance, hosted, weekend, etc).
+            </div>
+        </section>
+        <footer>
+            <p>LMU Broadcast App &mdash; Built for the Le Mans Ultimate community</p>
+            <p style="margin-top: 0.6rem">
+                <a href="https://github.com/LmuBroadcastApp/LMUBroadcastApp" target="_blank" rel="noopener noreferrer">GitHub</a> &middot; <a href="https://github.com/LmuBroadcastApp/LMUBroadcastApp/issues" target="_blank" rel="noopener noreferrer">Report Issue</a> &middot; <a href="https://github.com/LmuBroadcastApp/LMUBroadcastApp/releases" target="_blank" rel="noopener noreferrer">Releases</a>
+                <!--span class="download-counter" id="download-counter"><span class="download-count" id="download-count">--</span> downloads
+                    <noscript>(enable JS)</noscript>
+                </span-->
+            </p>
+        </footer>
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+            <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">&lsaquo;</button>
+            <img class="lightbox-img" id="lightbox-img" src="" alt=""/>
+            <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">&rsaquo;</button>
+        </div>
+        <script src="static/script.js"></script>
+    </body>
+</html>
