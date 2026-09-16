@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Chakra Petch';
-    src: url('static/ChakraPetch.woff2') format('woff2');
+    src: url('ChakraPetch.woff2') format('woff2');
 }
 
 * {
@@ -380,17 +380,21 @@ nav {
 .btn-primary {
     background: var(--primary);
     color: #fff;
+
     clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%);
     box-shadow: var(--glow-red);
+
     overflow: hidden;
 }
 
 .btn-primary::before {
-    content: '';
     position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0 8px, transparent 8px 16px);
+    content: '';
+
     opacity: 0;
+    inset: 0;
+
+    background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0 8px, transparent 8px 16px);
     transition: opacity var(--transition);
 }
 
@@ -403,15 +407,16 @@ nav {
 }
 
 .btn-secondary {
-    background: transparent;
+    background: var(--bg-elevated);
     color: var(--accent);
-    border: 1px solid var(--border-hover);
+
+    overflow: hidden;
     clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%);
 }
 
 .btn-secondary:hover {
-    border-color: var(--accent);
-    color: var(--accent);
+    background: var(--accent);
+    color: var(--bg-dark);
 }
 
 .download-counter {
@@ -426,9 +431,9 @@ nav {
 
 /* Sections */
 section {
+    padding: 4.5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4.5rem 2rem;
 }
 
 .kicker {

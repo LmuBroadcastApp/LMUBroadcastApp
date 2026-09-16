@@ -1,6 +1,40 @@
 # Changelog
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.8.0] - 16/09/2026
+### Added
+* Application:
+    * Standings telemetry (last/best sectors, track cut points, fuel/nrg usage, etc)
+    * Detect when a vehicle is out of the track (show the driver's name in yellow)
+    * Add a new app style (Adobe Spectrum) `File` -> `Settings` -> `Style`: `Select Theme`
+        * Playground: may change in the future
+    * Make use of UPnP to open port on the router for livetiming sharing
+        * May require firewall access and a router with UPnP enabled
+        * Remember to share your public IP or set up a DNS entry pointing to your public IP
+    * Move session info from app title bar to `Broadcast Controls`
+        * `Cuts` is shown for the current driver on screen
+* Overlay:
+    * Driver telemetry overlay has been improved (best/last lap and sectors, minisectors, tire age in the current stint)
+        * Minisectors are computed by the app, may not work properly
+        * Tire age is from the last pitstop (does not know if tires have been changed, or not)
+
+### Changed
+* Application:
+    * `Settings` has been moved under `File`
+    * Change keybindings is easier, auto-detect pressed keys
+    * Notification settings: set position and incident points
+* Overlay:
+    * When a vehicle is out of the track or has an abnormal speed (below 50 km/h) that section of track map will be drawn in yellow
+    * Rework all the livetiming (track map, track cuts, weather forecast, damage, sectors, last pitstop, etc.)
+    * Change style and add new overlays for driving: damage (aero, suspension, body), track map, weather forecast, etc.
+    * Rename `overlay` to `broadcasting` (unify names)
+        * New URL for OBS: `http://localhost:6432/broadcasting/index.html`
+
+### Fixed
+* Overlay:
+    * Notification color for vehicle class not showing
+    * Position gain/lost for tower showing wrong icon
+
 ## [1.7.0] - 01/08/2026
 ### Added
 * Application:
@@ -21,7 +55,7 @@ All notable changes to this project will be documented in this file. The format 
 ## [1.6.0] - 19/06/2026
 ### Added
 * Overlay:
-    * Adess vehicle logo
+    * Added vehicle logo
 
 ### Changed
 * Application:
@@ -32,7 +66,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Fixed
 * Overlay:
-    * Fix standings not showing for specific class
+    * Fix standings not showing for specific class.
 
 ## [1.5.1] - 12/05/2026
 ### Changed
@@ -103,7 +137,7 @@ All notable changes to this project will be documented in this file. The format 
 * Overlay:
     * Hide overlay when replay is active
     * Show a banner when replay is active (top left of the screen)
-        * If you want to change it replace `assets\overlays\styles\img\others\replay.webp`
+        * If you want to change it replace `assets/overlays/styles/img/others/replay.webp`
     * Driver panel:
         * Added positions gain/lost
         * Added qualy position
@@ -131,7 +165,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Removed
 * Application:
-    * Remove the "In-game" overlay controls due to 1.3 update (requires full rewrite)
+    * Remove the "In-game" overlay controls due to the 1.3 update (requires full rewrite)
 
 ## [1.3.0] - 28/02/2026
 ### Added
@@ -152,12 +186,12 @@ All notable changes to this project will be documented in this file. The format 
         * Change between gap mode: leader or ahead
         * Change right column info: energy, damage, #pitstops, tires, best lap or last lap
     * Trackmap:
-        * Change width and/or height (this is used to scale it MIN(game-width/width, game-height/height))
+        * Change width and/or height (this is used to scale it to fit the game window)
         * Change padding (space between the track map and the margin of the drawing canvas)
         * Rotate and flip x/y
     * Weather forecast:
         * Show current weather info
-        * Forecast the next weather slot (based on tiny pedal)
+        * Forecast the next weather slot (based on TinyPedal)
     * Driver panel:
         * Show driver name
         * Show team name
@@ -169,9 +203,7 @@ All notable changes to this project will be documented in this file. The format 
         * Session info (names, remaining time and track yellow flags)
         * Weather info (track and air temps, rain and wet percentage)
     * Overlay panel:
-        * Go back in time:
-        * +5, +15, +30 seconds
-        * Custom input for time
+        * Go back in time (+5, +15, +30 seconds, or custom input)
         * Exit Replay button (only visible if game is in replay)
     * Playback speed:
         * Forward: 0.5, 1.0 and 2.0 speed multiplier
@@ -207,7 +239,7 @@ All notable changes to this project will be documented in this file. The format 
 * Add vehicle overview, register pitstop times, lap times, etc (pro)
 * Add vehicle telemetry, register each lap throttle, brake, steering, etc (pro)
 * Vehicle/Driver with penalty will have the name in red
-* Vehicle/Driver driving slower than 50Km/h  will have the name in yellow
+* Vehicle/Driver driving slower than 50Km/h will have the name in yellow
 
 ### Changed
 * Best lap of each category is shown in purple

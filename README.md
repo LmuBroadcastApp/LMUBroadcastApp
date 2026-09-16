@@ -1,7 +1,7 @@
 ### 🚀 LMUBroadcastApp
 <p>
     <img alt="AppLogo" src="docs/assets/000_logo.png" align="left"/>
-    "LMU Broadcast App" is an intuitive broadcast application that allows a small production team (or even a single operator) to manage a live stream and replays, view track event, handle cameras, etc. enhancing the storytelling of the race.
+    An intuitive broadcast application that allows a small production team (or even a single operator) to manage a live stream and replays, view track events, handle cameras, etc. — enhancing the storytelling of the race.
 </p>
 
 <p>
@@ -12,7 +12,7 @@
 
 ### 🎬 Overview
 The program offers a simple way to switch between cameras and access the various events that can occur during the race: penalties, incidents, track limits, etc.
-Below is a description of the different panels within the game:
+Below is a description of the different panels within the application:
 
 - 📊 **Standings**: As the name indicates, here you can see the participants in the race. This table contains the on-track position, car number, driver name, the different cameras, etc.
 - 🎨 **Overlays**: Custom overlay (session info, standings tower, weather forecast, trackmap and driver info).
@@ -48,6 +48,7 @@ Have a bug report, feature request, or idea? <br/>
 
 ### 📚 Wiki
 * 📨 [Notifications](wiki/notifications.md)
+* 🪟 [Overlays](wiki/overlays.md)
 * 🔣 [Keybindings](wiki/bindings.md)
 * 🎦 [AutoCam](wiki/autocam.md)
 
@@ -55,12 +56,16 @@ Have a bug report, feature request, or idea? <br/>
 
 ### 🖼️ Screenshots
 <table>
-    <tr>
-        <td><img alt="overlay_over_game_window" src="docs/assets/003_game_overlay.jpg"/></td>
-        <td><img alt="web_livetiming" src="docs/assets/004_game_livetiming.jpg"/></td>
+     <tr>
+        <td colspan=2><img alt="telemetry_tab" src="docs/assets/004_telemetry_tab.jpg"/></td>
     </tr>
     <tr>
-        <td colspan="2"><img alt="AppVehicleOverviewAndTelemetry" src="docs/assets/002_vehicle_overview_telemetry.jpg"/></td>
+        <td><img alt="overlay_over_game_window" src="docs/assets/002_game_overlay.jpg"/></td>
+        <td><img alt="web_livetiming" src="docs/assets/003_game_livetiming.jpg"/></td>
+    </tr>
+    <tr>
+        <td><img alt="vehicle_overview" src="docs/assets/005_vehicle_overview.jpg"/></td>
+        <td><img alt="vehicle_telemetry" src="docs/assets/006_vehicle_telemetry.jpg"/></td>
     </tr>
 </table>
 
@@ -72,12 +77,11 @@ See [CHANGELOG.md](CHANGELOG.md) for a list of changes and updates.
 ---
 
 ## Disclaimer
-Due to inconsistencies in the game's REST API, the application may sometimes exhibit undesirable behavior (especially when loading a session). It is best to open the application when the session is loaded.
-In addition, the API (REST, WebSockets, shared memory) behaves differently depending on the type of game session (daily, endurance, hosted, weekend, etc).
+- Due to inconsistencies in the game's REST API, the application may sometimes exhibit undesirable behavior (especially when loading a session). It is best to open the application when the session is loaded.
+- The API (REST, WebSockets, shared memory) behaves differently depending on the type of game session (daily, endurance, hosted, weekend, etc.).
 
 ## Notice
-The application is free to use. Some features are available at no cost, while others require a paid subscription.<br/>
-**The annual subscription costs €30**.
+The application is free to use. Some features are available at no cost, while others require a paid subscription. **The annual subscription costs €30**.
 
 **Free features**:
  - Standings
@@ -86,6 +90,6 @@ The application is free to use. Some features are available at no cost, while ot
 **Premium features (behind a paywall)**:
  - Events (incidents, track limits, etc.)
  - Vehicle overview and telemetry
- - Replay and replay controls
+ - Replay controls
  - Autocam
  - Overlay

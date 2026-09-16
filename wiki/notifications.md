@@ -15,7 +15,7 @@ Stay informed with real-time session updates through the integrated notification
 ---
 
 ## ℹ️ Important Information
-The notification system relies on **shared memory data**, which behaves different depending on the session (raked, not ranked and race, practice, etc).
+The notification system relies on **shared memory data**, which behaves differently depending on the session (ranked, not ranked, race, practice, etc.).
 
 ### Supported Session Types
 - 🏎️ **Race Sessions**
@@ -26,3 +26,7 @@ The notification system relies on **shared memory data**, which behaves differen
 - 📊 **Ranked Practice Sessions**
   - Track Limits
   - Incident Reports
+
+---
+
+*For additional support or to report issues, please refer to the [application documentation](https://github.com/LmuBroadcastApp/LMUBroadcastApp).* 
