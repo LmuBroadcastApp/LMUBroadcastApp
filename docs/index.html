@@ -5,28 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>LMU Broadcast App - Live Streaming Made Easy</title>
         <meta name="description" content="An intuitive broadcast application for Le Mans Ultimate. Manage live streams, replays, camera control, and more."/>
-        <meta name="theme-color" content="#0b0d12"/>
+        <meta name="theme-color" content="#020e2b"/>
         <meta property="og:title" content="LMU Broadcast App - Live Streaming Made Easy"/>
         <meta property="og:description" content="An intuitive broadcast application for Le Mans Ultimate. Manage live streams, replays, camera control, and more."/>
-        <meta property="og:image" content="assets/001_app_overview.jpg"/>
+        <meta property="og:image" content="assets/shared/app-overview.jpg"/>
         <meta property="og:type" content="website"/>
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content="LMU Broadcast App - Live Streaming Made Easy"/>
         <meta name="twitter:description" content="An intuitive broadcast application for Le Mans Ultimate. Manage live streams, replays, camera control, and more."/>
-        <meta name="twitter:image" content="assets/001_app_overview.jpg"/>
-        <link rel="icon" href="assets/000_logo.png"/>
+        <meta name="twitter:image" content="assets/shared/app-overview.jpg"/>
+        <link rel="icon" href="assets/shared/lmu-broadcast-logo.png"/>
         <link rel="preconnect" href="https://api.github.com"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="static/style.css"/>
     </head>
     <body>
         <header>
             <nav>
                 <div class="nav-logo">
-                    <img src="assets/000_logo.png" alt="LMU Broadcast App Logo"/> <span>LMU Broadcast App</span>
+                    <img src="assets/shared/lmu-broadcast-logo.png" alt="LMU Broadcast App Logo"/> <span>LMU Broadcast App</span>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#features">Features</a></li>
+                    <li><a href="#driving-features">Driving</a></li>
                     <!--li><a href="#screenshots">Screenshots</a></li-->
                     <li><a href="#install">Install</a></li>
                     <li>
@@ -36,6 +40,9 @@
             </nav>
         </header>
         <section id="home" class="hero">
+            <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+                <source src="assets/shared/lmu.mp4" type="video/mp4"/>
+            </video>
             <div class="hero-circuit" aria-hidden="true">
                 <svg viewBox="0 0 900 560" fill="none">
                     <path d="M120 440 H340 C400 440 440 420 470 385 C500 350 500 320 470 300 C440 280 430 250 450 225 L560 140 C590 112 640 110 665 138 C690 165 730 175 765 160 C800 145 820 120 805 90 C790 60 755 55 735 80 C700 120 640 120 610 150 L520 260 C500 280 500 305 525 320 C550 335 560 365 545 395 C535 420 500 425 470 440 H200 C150 440 120 430 120 440 Z" stroke="currentColor"/>
@@ -55,78 +62,147 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/001_app_overview.jpg" alt="LMU Broadcast App Overview"/>
+                <img src="assets/shared/app-overview.jpg" alt="LMU Broadcast App Overview"/>
                 <span class="feed-chip top"><span class="live-dot"></span>Cam 02 &middot; Onboard</span>
                 <span class="feed-chip bottom">LMU Broadcast &middot; Lap 12 / 26</span>
             </div>
         </section>
         <section id="features">
-            <h2 class="kicker">Race Director's Kit</h2>
-            <h2 class="section-title">Features</h2>
-            <p class="section-subtitle">Everything you need for professional race broadcasting</p>
-            <div class="features-grid">
-                <div class="feature-card reveal" data-num="01">
-                    <div class="feature-top"><span class="feature-plate">01</span></div>
-                    <h3>Live Standings</h3>
-                    <p>
-                        View real-time race positions, car numbers, driver names, and camera assignments for all participants.
-                    </p>
+            <div class="feature-group">
+                <h2 class="kicker">Race Director's Kit</h2>
+                <h2 class="section-title">Broadcast Features</h2>
+                <p class="section-subtitle">Everything you need for professional race broadcasting</p>
+                <div class="features-grid">
+                    <div class="feature-card reveal" data-num="01">
+                        <div class="feature-top"><span class="feature-plate">01</span></div>
+                        <h3>Live Standings</h3>
+                        <p>
+                            View real-time race positions, car numbers, driver names, and camera assignments for all participants.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="02">
+                        <div class="feature-top"><span class="feature-plate">02</span></div>
+                        <h3>Custom Overlays</h3>
+                        <p>
+                            Session info, standings tower, weather forecast, track map, and driver info — fully customizable with move, color, and font options.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="03">
+                        <div class="feature-top"><span class="feature-plate">03</span></div>
+                        <h3>Game Panels</h3>
+                        <p>
+                            In-game overlays for instant access to race data. Toggle them directly from the application.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="04">
+                        <div class="feature-top"><span class="feature-plate">04</span></div>
+                        <h3>Auto Cam</h3>
+                        <p>
+                            Intelligent camera autopilot that automatically selects the most exciting car to follow based on multiple factors.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="05">
+                        <div class="feature-top"><span class="feature-plate">05</span></div>
+                        <h3>Event Tracking</h3>
+                        <p>
+                            Track penalties, incidents, track limits, overtakes, and other race events as they happen.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="06">
+                        <div class="feature-top"><span class="feature-plate">06</span></div>
+                        <h3>Vehicle Telemetry</h3>
+                        <p>
+                            Detailed vehicle overview, pitstop times, lap times, and telemetry data including throttle, brake, and steering inputs.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="07">
+                        <div class="feature-top"><span class="feature-plate">07</span></div>
+                        <h3>Replay Controls</h3>
+                        <p>
+                            Go back in time with +5, +15, +30 second jumps, custom time input, and playback speed controls.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="08">
+                        <div class="feature-top"><span class="feature-plate">08</span></div>
+                        <h3>Notification System</h3>
+                        <p>
+                            Real-time notifications for race winners, fastest laps, penalties, track limits, and incidents.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="09">
+                        <div class="feature-top"><span class="feature-plate">09</span></div>
+                        <h3>Keybindings &amp; Presets</h3>
+                        <p>
+                            Full keybinding customization and configuration presets to match your workflow.
+                        </p>
+                    </div>
                 </div>
-                <div class="feature-card reveal" data-num="02">
-                    <div class="feature-top"><span class="feature-plate">02</span></div>
-                    <h3>Custom Overlays</h3>
-                    <p>
-                        Session info, standings tower, weather forecast, track map, and driver info — fully customizable with move, color, and font options.
-                    </p>
-                </div>
-                <div class="feature-card reveal" data-num="03">
-                    <div class="feature-top"><span class="feature-plate">03</span></div>
-                    <h3>Game Panels</h3>
-                    <p>
-                        In-game overlays for instant access to race data. Toggle them directly from the application.
-                    </p>
-                </div>
-                <div class="feature-card reveal" data-num="04">
-                    <div class="feature-top"><span class="feature-plate">04</span></div>
-                    <h3>Auto Cam</h3>
-                    <p>
-                        Intelligent camera autopilot that automatically selects the most exciting car to follow based on multiple factors.
-                    </p>
-                </div>
-                <div class="feature-card reveal" data-num="05">
-                    <div class="feature-top"><span class="feature-plate">05</span></div>
-                    <h3>Event Tracking</h3>
-                    <p>
-                        Track penalties, incidents, track limits, overtakes, and other race events as they happen.
-                    </p>
-                </div>
-                <div class="feature-card reveal" data-num="06">
-                    <div class="feature-top"><span class="feature-plate">06</span></div>
-                    <h3>Vehicle Telemetry</h3>
-                    <p>
-                        Detailed vehicle overview, pitstop times, lap times, and telemetry data including throttle, brake, and steering inputs.
-                    </p>
-                </div>
-                <div class="feature-card reveal" data-num="07">
-                    <div class="feature-top"><span class="feature-plate">07</span></div>
-                    <h3>Replay Controls</h3>
-                    <p>
-                        Go back in time with +5, +15, +30 second jumps, custom time input, and playback speed controls.
-                    </p>
-                </div>
-                <div class="feature-card reveal" data-num="08">
-                    <div class="feature-top"><span class="feature-plate">08</span></div>
-                    <h3>Notification System</h3>
-                    <p>
-                        Real-time notifications for race winners, fastest laps, penalties, track limits, and incidents.
-                    </p>
-                </div>
-                <div class="feature-card reveal" data-num="09">
-                    <div class="feature-top"><span class="feature-plate">09</span></div>
-                    <h3>Keybindings &amp; Presets</h3>
-                    <p>
-                        Full keybinding customization and configuration presets to match your workflow.
-                    </p>
+            </div>
+            <div class="feature-group" id="driving-features">
+                <h2 class="kicker">Driver's View</h2>
+                <h2 class="section-title">Driving Overlay Features</h2>
+                <p class="section-subtitle">A focused in-car overlay that keeps race-critical data on screen</p>
+                <div class="features-grid">
+                    <div class="feature-card reveal" data-num="01">
+                        <div class="feature-top"><span class="feature-plate">01</span></div>
+                        <div class="feature-media">
+                            <img src="assets/driver/live-telemetry.png" alt="Driving overlay telemetry panel" loading="lazy" decoding="async"/>
+                        </div>
+                        <h3>Live Telemetry</h3>
+                        <p>
+                            Throttle, brake, and steering traces with RPM shift lights, speed, and gear for the focused car.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="02">
+                        <div class="feature-top"><span class="feature-plate">02</span></div>
+                        <div class="feature-media">
+                            <img src="assets/driver/pit-stop-estimation.png" alt="Driving overlay pit stop estimation panel" loading="lazy" decoding="async"/>
+                        </div>
+                        <h3>Pit Stop Estimation</h3>
+                        <p>
+                            Live breakdown of driver swap, penalties, damage, tyres, fuel, and virtual energy, including the total stop time.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="03">
+                        <div class="feature-top"><span class="feature-plate">03</span></div>
+                        <div class="feature-media">
+                            <img src="assets/driver/weather-forecast.png" alt="Driving overlay weather forecast panel" loading="lazy" decoding="async"/>
+                        </div>
+                        <h3>Weather Forecast</h3>
+                        <p>
+                            Track grip, rain and wetness, track and ambient temperature, wind, and the forecast for the rest of the session.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="04">
+                        <div class="feature-top"><span class="feature-plate">04</span></div>
+                        <div class="feature-media">
+                            <img src="assets/driver/damage-monitor.png" alt="Driving overlay damage monitor panel" loading="lazy" decoding="async"/>
+                        </div>
+                        <h3>Damage Monitor</h3>
+                        <p>
+                            Aero, body, and suspension damage percentages with colour-coded severity so you know what to repair.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="05">
+                        <div class="feature-top"><span class="feature-plate">05</span></div>
+                        <div class="feature-media">
+                            <img src="assets/driver/track-map.png" alt="Driving overlay track map panel" loading="lazy" decoding="async"/>
+                        </div>
+                        <h3>Track Map</h3>
+                        <p>
+                            Stylised circuit map with live car positions, the pit lane, and warning markers.
+                        </p>
+                    </div>
+                    <div class="feature-card reveal" data-num="06">
+                        <div class="feature-top"><span class="feature-plate">06</span></div>
+                        <div class="feature-media">
+                            <img src="assets/driver/custom-layout.png" alt="Driving overlay panels positioned around the screen" loading="lazy" decoding="async"/>
+                        </div>
+                        <h3>Custom Layout</h3>
+                        <p>
+                            Enable, move, and scale each panel independently. The overlay hides itself automatically outside real time.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -137,7 +213,7 @@
             <div class="shots">
                 <figure class="shot reveal" data-num="01">
                     <div class="shot-frame">
-                        <img src="assets/002_game_overlay.jpg" alt="Game Overlay" loading="lazy"/>
+                        <img src="assets/broadcast/game-overlay.jpg" alt="Game Overlay" loading="lazy"/>
                     </div>
                     <figcaption class="shot-caption">
                         <span class="cam">CAM 01</span>
@@ -147,7 +223,7 @@
                 </figure>
                 <figure class="shot reveal" data-num="02">
                     <div class="shot-frame">
-                        <img src="assets/003_game_livetiming.jpg" alt="Web Livetiming" loading="lazy"/>
+                        <img src="assets/broadcast/web-livetiming.jpg" alt="Web Livetiming" loading="lazy"/>
                     </div>
                     <figcaption class="shot-caption">
                         <span class="cam">CAM 02</span>
@@ -157,7 +233,7 @@
                 </figure>
                 <figure class="shot reveal" data-num="03">
                     <div class="shot-frame">
-                        <img src="assets/004_telemetry_tab.jpg" alt="Telemetry Tab" loading="lazy"/>
+                        <img src="assets/broadcast/telemetry-tab.jpg" alt="Telemetry Tab" loading="lazy"/>
                     </div>
                     <figcaption class="shot-caption">
                         <span class="cam">CAM 03</span>
@@ -167,7 +243,7 @@
                 </figure>
                 <figure class="shot reveal" data-num="04">
                     <div class="shot-frame">
-                        <img src="assets/005_vehicle_overview.jpg" alt="Vehicle Overview" loading="lazy"/>
+                        <img src="assets/broadcast/vehicle-overview.jpg" alt="Vehicle Overview" loading="lazy"/>
                     </div>
                     <figcaption class="shot-caption">
                         <span class="cam">CAM 04</span>
@@ -177,7 +253,7 @@
                 </figure>
                 <figure class="shot reveal" data-num="05">
                     <div class="shot-frame">
-                        <img src="assets/006_vehicle_telemetry.jpg" alt="Vehicle Telemetry" loading="lazy"/>
+                        <img src="assets/broadcast/vehicle-telemetry.jpg" alt="Vehicle Telemetry" loading="lazy"/>
                     </div>
                     <figcaption class="shot-caption">
                         <span class="cam">CAM 05</span>
