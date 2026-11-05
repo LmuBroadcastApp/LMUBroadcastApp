@@ -48,18 +48,18 @@ Once saved, you can instantly load any preset using the default keybindings belo
 
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+Alt+F1`  | Change to **wiper** camera |
-| `Ctrl+Alt+F2`  | Change to **passenger** camera |
-| `Ctrl+Alt+F3`  | Change to **dashboard** camera |
-| `Ctrl+Alt+F4`  | Change to **bonnet** camera |
-| `Ctrl+Alt+F5`  | Change to **splitter** camera |
-| `Ctrl+Alt+F6`  | Change to **diffusor** camera |
-| `Ctrl+Alt+F7`  | Change to **wing-1** camera |
-| `Ctrl+Alt+F8`  | Change to **wing-2** camera |
-| `Ctrl+Alt+F9`  | Change to **on-board** camera |
-| `Ctrl+Alt+F10` | Change to **nose** camera |
-| `Ctrl+Alt+F11` | Change to **swing-man** camera |
-| `Ctrl+Alt+F12` | Change to **track** camera |
+| `Ctrl+Alt+F1`  | Change to **Cockpit** camera |
+| `Ctrl+Alt+F2`  | Change to **Swingman** camera |
+| `Ctrl+Alt+F3`  | Change to **Nose** camera |
+| `Ctrl+Alt+F4`  | Change to **Bonnet** camera |
+| `Ctrl+Alt+F5`  | Change to **Roof Cam** camera |
+| `Ctrl+Alt+F6`  | Change to **Passenger** camera |
+| `Ctrl+Alt+F7`  | Change to **Dashcam** camera |
+| `Ctrl+Alt+F8`  | Change to **Mirror** camera |
+| `Ctrl+Alt+F9`  | Change to **Front Bumper** camera |
+| `Ctrl+Alt+F10` | Change to **Rear Bumper** camera |
+| `Ctrl+Alt+F11` | Change to **Reverse Roof Camera** |
+| `Ctrl+Alt+F12` | Change to **Cycle Track** camera |
 
 ---
 
@@ -106,12 +106,12 @@ The action `config-presets-load` can be bound as many times as you need, changin
     {
         "action": "camera-change",
         "binding": "Ctrl+Alt+F1",
-        "user_data": "wiper"
+        "user_data": "Cockpit"
     },
     {
         "action": "camera-change",
         "binding": "Ctrl+Alt+F2",
-        "user_data": "passenger"
+        "user_data": "Swingman"
     }
 ]
 ```
@@ -133,7 +133,7 @@ The action `config-presets-load` can be bound as many times as you need, changin
 | `replay-back-in-time-5` | Trigger replay mode and go back in time 5 seconds | |
 | `replay-back-in-time-10` | Trigger replay mode and go back in time 10 seconds | |
 | `replay-back-in-time-15` | Trigger replay mode and go back in time 15 seconds | |
-| `camera-change` | Change to one of the predefined cameras | **user_data** field contains the camera name <br/> `wiper` / `passenger` / `dashboard` / `bonnet` / `splitter` / `diffusor` / `wing-1` / `wing-2` / `on-board` / `nose` / `swing-man` / `track` |
+| `camera-change` | Change to one of the predefined cameras | **user_data** field contains the camera name <br/> `Cockpit` / `Swingman` / `NoseCamera` / `BonnetCamera` / `RoofCam` / `CockpitSide` / `DashCam` / `Mirror` / `FrontBumper` / `RearBumper` / `ReverseRoofCamera` / `TracksideCycle` <br/><br/> If you know another camera name, you can use it as `user_data` to bind any available game camera |
 
 ---
 

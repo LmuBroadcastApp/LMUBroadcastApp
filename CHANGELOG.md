@@ -1,6 +1,46 @@
 # Changelog
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.9.0] - XX/10/2026
+### Added
+* Application:
+    * Added a `Focus panel` selector in `Custom overlay` -> `Settings`, choosing whether the focused driver area shows the driver info, the telemetry (it replaces the `Driver telemetry` checkbox)
+    * Added per-overlay enable/disable toggles and an individual scale slider (1x–5x) for each of the driver overlays
+    * Track map scale changed from a fixed size to a single uniform scale slider, scaling relative to its original size
+    * Vehicle telemetry (switched to a compact view with an "always latest lap" option)
+        * Track map view with throttle/brake coloring (for everyone)
+        * Suspension plots (for the player only)
+    * Add new "Telemetry" settings section
+        * Number of graph columns
+        * Store only for player
+    * Add new starting grid settings
+        * Enable/disable and page duration in `Custom overlay` -> `Settings`
+        * Style (slot size, gaps, stagger, number width, font size and colors) in `Custom overlay` -> `Broadcast style`
+    * Add a show/hide button for the fullscreen live classification in `Custom overlay` -> `Settings`
+* Overlay:
+    * The focused driver panels are now picked by the app, the driver info and the telemetry: one replaces the other
+    * Add an option to hide the DNF from the tower standings
+    * New fullscreen starting grid, the qualifying order drawn as a staggered grid
+        * Paged two rows at a time with a page indicator, and takes over the whole window while it is shown
+        * Header with the circuit and current/forecast weather, and cards with the driver, car number, class and qualifying time
+    * New fullscreen live classification, grouped by vehicle class with position, laps, gap and position change; it takes over the whole window while it is shown
+
+### Changed
+* Application:
+    * Camera controls reworked to use the new camera-by-name API and the updated in-game camera names
+    * Make use of the new shared memory connection source code
+    * Downscaled manufacturer logos with high-quality resampling
+    * Ride height and suspension deflection are now reported in centimeters
+* Overlay:
+    * Driver overlay small changes
+        * Change panels title header style
+        * Change shift lights to a bar
+
+### Fixed
+* Application:
+    * Crash while storing configuration due assets path memory corruption
+    * Fix pressets applying over current configuration instead of base config
+
 ## [1.8.0] - 16/09/2026
 ### Added
 * Application:
